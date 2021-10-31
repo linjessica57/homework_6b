@@ -1,0 +1,322 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:active {
+	color: black;
+	text-decoration: none;
+}
+
+#navbarContainer {
+	width: 100%;
+	position: sticky;
+	top: 0;
+}
+
+.navbarText {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 35px;
+	letter-spacing: 1px;
+	color: black;
+	border: 4px solid transparent;
+	padding: 6px;
+}
+
+.navbarText:hover {
+	border: 4px solid black;
+}
+
+
+#navbar-left {
+	display: inline-block;
+	padding-right: 20vh;
+	padding-left: 5vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	text-align: left;
+}
+
+#navbar-right {
+	display: inline-block;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	text-align: left;
+}
+
+.navbar {
+	display: inline-block;
+	padding-right: 25vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	text-align: left;
+}
+
+#currentTabBox {
+	border: 4px solid black;
+	padding: 6px;
+}
+
+.homecontainer {
+	position: relative;
+	text-align: center;
+}
+
+.hometext {
+	font-family: 'Baskervville', serif;
+	font-size: 60px;
+	line-height: 100px;
+	text-align: left;
+	color: white;
+	position: absolute;
+	top: 60px;
+	left: 70px;
+	width: 75%;
+}
+
+.productContainer {
+	display: flex;
+	flex-wrap: wrap;
+  	position: relative;
+  	margin: 0 auto;
+}
+
+.productContainer .imageContainer {
+	width: 50%;
+}
+
+.productContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+.imageContainer {
+	position: relative;
+}
+
+.hoverBox-container {
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	background: white;
+	margin: 0 auto;
+	bottom: 0;
+}
+
+.hoverBox-text {
+	font-family: Baskervville, serif;
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 120px;
+}
+
+.imageScroll{
+	position: relative;
+	float: left;
+	width: 50%;
+}
+
+.imageScroll img {
+	width: 100%;
+	height: 100%;
+}
+
+.productDetailContainer {
+	width: 50%;
+	float: right;
+	display: inline-block;
+}
+
+#productName {
+	font-family: 'Baskervville', serif;
+	font-size: 55px;
+	margin-top: 75px;
+	margin-left: 100px;
+}
+
+#productDescription {
+	font-family: 'Baskervville', serif;
+	font-size: 25px;
+	margin-left: 100px;
+	margin-top: 40px;
+	width: 75%;
+}
+
+.whitespace {
+	width: 50px;
+	height: 166px;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.choiceHeader {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.colorChoices {
+	width: 110px;
+	height: 150px;
+	text-align: center;
+	margin: 0 auto;
+	vertical-align: top;
+	padding-top: 20px;
+	margin-left: 25px;
+	margin-top: 30px;
+	display: inline-block;
+	border: 4px solid transparent;
+}
+
+.colorChoices:hover {
+	border: 4px solid black;
+}
+
+.colorChoices-selected {
+	border: 4px solid black;
+}
+
+.colorBox {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	margin-bottom: 15px;
+}
+
+.choiceLabel {
+	text-align: center;
+	display: inline-block;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.fillChoices {
+	margin: 0 auto;
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 35px;
+	margin-top: 40px;
+	border: 4px solid transparent;
+	padding: 10px;
+}
+
+.fillChoices:hover {
+	border: 4px solid black;
+}
+
+#afterschoolspecial {
+	background-color: #93C29D
+}
+
+#morninghaze {
+	background-color: #DF8735;
+}
+
+#cozydenim {
+	background-color: #6098B0;
+}
+
+#rainyday {
+	background-color: #C3C3BC;
+}
+
+#addcartButton {
+	width: 275px;
+	height: 66px;
+	margin: 0 auto;
+	border: 4px solid black;
+}
+
+#addcartText {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 70px;
+}
+
+#addcartButton:hover {
+	color: white;
+	background-color: black;
+}
+
+#cartHeader {
+	font-family: 'Baskervville', serif;
+	font-size: 55px;
+	margin-left: 80px;
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
+.subtotalsText {
+	font-family: 'Baskervville', serif;
+	font-size: 25px;
+	text-align: right;
+	margin-right: 80px;
+}
+
+.cartEmpty {
+	font-family: 'Baskervville', serif;
+	font-size: 25px;
+	margin-left: 80px;
+	margin-bottom: 80px;
+}
+
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+.footer {
+	display: inline-block;
+	width: 100%;
+	margin-top: 1.5%;
+	top: 100px;
+	background: black;
+	font-family: 'Bebas Neue', sans-serif;
+	color: white;
+}
+
+#flogo {
+	display: inline-block;
+	float: left;
+	font-size: 35px;
+	padding-left: 5vh;
+	padding-top: 5vh;
+	padding-right: 50vh;
+	letter-spacing: 1px;
+}
+
+.fcontainers {
+	display: inline-block;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 25vh;
+}
+
+.ftext {
+	float: left;
+	font-size: 20px;
+	line-height: 2.5;
+}
+
+.fheader {
+	font-size: 25px;
+}
