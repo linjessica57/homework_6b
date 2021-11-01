@@ -138,7 +138,7 @@ if (productsInCart == null) {
 	emptydiv.className = "cartEmpty";
 	emptydiv.innerHTML = "Your shopping cart is empty";
 	document.getElementById("cartProducts").appendChild(emptydiv);
-} else {
+} else if (document.getElementById("cartProducts") != null){
 	for (let i = 0; i < productsInCart.length; i++) {
 		console.log(productsInCart[i]);
 
