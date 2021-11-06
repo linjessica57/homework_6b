@@ -304,8 +304,54 @@ hr {
 	margin-right: 80px;
 }
 
+/*Added to cart items*/
 #cartImg {
 	width: 150px;
+	margin-left: 80px;
+}
+
+#itemName {
+	font-family: 'Baskervville', serif;
+	font-size: 25px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 80px;
+	margin-left: 30px;
+}
+
+#itemSelection {
+	font-family: 'Baskervville', serif;
+	font-size: 20px;
+	display: inline-flex;
+	vertical-align: top;
+	margin-top: 70px;
+	margin-left: 30px;
+	line-height: 30px;
+}
+
+#itemQty {
+	font-family: 'Baskervville', serif;
+	font-size: 20px;
+	display: inline-flex;
+	vertical-align: top;
+	margin-top: 83px;
+	margin-left: 50px;
+}
+
+#itemPrice {
+	font-family: 'Baskervville', serif;
+	font-size: 20px;
+	display: inline-flex;
+	vertical-align: top;
+	margin-top: 83px;
+	margin-left: 50px;
+}
+
+#remove {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 80px;
+	margin-left: 100px;
 }
 
 /*Footer*/

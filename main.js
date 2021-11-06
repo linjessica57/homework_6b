@@ -6,6 +6,7 @@ let img4 = document.getElementById('product4');
 let color = document.getElementsByClassName('colorChoices');
 let colorselect = "none";
 let fillselect = "none";
+let imgselect = "none";
 
 for (let i = 0; i < color.length; i++) {
   	color[i].addEventListener("click", function() {
@@ -24,6 +25,7 @@ for (let i = 0; i < color.length; i++) {
   		img3.style.display = "none";
   		img4.style.display = "none";
   		colorselect = "Afternoon Special";
+  		imgselect = "assets/product1.jpg";
   	} else if (color[i].id === "product1selector" && selectedcol) {
   		img2.style.display = "block";
   		img3.style.display = "block";
@@ -37,6 +39,7 @@ for (let i = 0; i < color.length; i++) {
   		img3.style.display = "none";
   		img4.style.display = "none";
   		colorselect = "Morning Haze";
+  		imgselect = "assets/product2.jpg";
   	} else if (color[i].id === "product2selector" && selectedcol) {
   		img1.style.display = "block";
   		img3.style.display = "block";
@@ -50,6 +53,7 @@ for (let i = 0; i < color.length; i++) {
   		img2.style.display = "none";
   		img4.style.display = "none";
   		colorselect = "Cozy Denim";
+  		imgselect = "assets/product3.jpg";
   	} else if (color[i].id === "product3selector" && selectedcol) {
   		img1.style.display = "block";
   		img2.style.display = "block";
@@ -63,6 +67,7 @@ for (let i = 0; i < color.length; i++) {
   		img2.style.display = "none";
   		img3.style.display = "none";
   		colorselect = "Rainy Day";
+  		imgselect = "assets/product4.jpg";
   	} else if (color[i].id === "product4selector" && selectedcol) {
   		img1.style.display = "block";
   		img2.style.display = "block";
@@ -120,8 +125,9 @@ for (let i=0; i < carts.length; i++) {
 				"name": "Round Pillow",
 				"color": colorselect,
 				"fill": fillselect,
+				"img": imgselect,
 				"price": "$160",
-				"incart": 1,
+				"qty": 1,
 			}
 			localStorage.setItem("product", JSON.stringify(product));
 			productArray.push(product);
@@ -142,20 +148,43 @@ if (productsInCart == null) {
 	for (let i = 0; i < productsInCart.length; i++) {
 		console.log(productsInCart[i]);
 
+		//Add name of cart item
 		let namediv = document.createElement("div");
 		namediv.innerHTML = productsInCart[i]["name"];
+		namediv.setAttribute("id", "itemName");
 
-		let colordiv = document.createElement("div");
-		colordiv.innerHTML = productsInCart[i]["color"];
+		//Add selections of cart item
+		let selectdiv = document.createElement("div");
+		selectdiv.innerHTML = productsInCart[i]["color"] + "<br>" + productsInCart[i]["fill"];
+		selectdiv.setAttribute("id", "itemSelection");
 
+		//Add image of cart item
 		let image = document.createElement("img");
-		image.src = "assets/product1.jpg";
+		console.log(productsInCart[i]["img"]);
+		image.src = productsInCart[i]["img"];
 		image.setAttribute("id", "cartImg");
 
-		// div.appendChild(innerdiv);
+		//Add qty of item 
+		let qtydiv = document.createElement("div");
+		qtydiv.innerHTML = productsInCart[i]["qty"];
+		qtydiv.setAttribute("id", "itemQty");
+
+		//Add price of item
+		let pricediv = document.createElement("div");
+		pricediv.innerHTML = productsInCart[i]["price"];
+		pricediv.setAttribute("id", "itemPrice");
+
+		//Add a remove button
+		let removeimg = document.createElement("img");
+		removeimg.src = "assets/remove.png";
+		removeimg.setAttribute("id", "remove");
+
 		document.getElementById("cartProducts").appendChild(image);
 		document.getElementById("cartProducts").appendChild(namediv);
-		document.getElementById("cartProducts").appendChild(colordiv);
+		document.getElementById("cartProducts").appendChild(selectdiv);
+		document.getElementById("cartProducts").appendChild(qtydiv);
+		document.getElementById("cartProducts").appendChild(pricediv);
+		document.getElementById("cartProducts").appendChild(removeimg);
 	}
 }
 
@@ -182,3 +211,16 @@ function cartNumber() {
 }
 
 onLoadCartNumber();
+
+function removeCart() {
+	let removes = document.querySelector('#remove');
+
+	removes.addEventListener('click', () => {
+		console.log("entered loop");
+		localStorage.removeItem("productArray");
+		localStorage.removeItem("cartNumber");
+		window.location.reload(true);
+	})
+}
+
+removeCart();
