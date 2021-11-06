@@ -132,7 +132,6 @@ for (let i=0; i < carts.length; i++) {
 			localStorage.setItem("product", JSON.stringify(product));
 			productArray.push(product);
 			localStorage.setItem("productArray", JSON.stringify(productArray));
-			console.log(productArray);
 		}
 	})
 }
@@ -146,7 +145,6 @@ if (productsInCart == null) {
 	document.getElementById("cartProducts").appendChild(emptydiv);
 } else if (document.getElementById("cartProducts") != null){
 	for (let i = 0; i < productsInCart.length; i++) {
-		console.log(productsInCart[i]);
 
 		//Add name of cart item
 		let namediv = document.createElement("div");
@@ -216,7 +214,6 @@ function removeCart() {
 	let removes = document.querySelector('#remove');
 
 	removes.addEventListener('click', () => {
-		console.log("entered loop");
 		localStorage.removeItem("productArray");
 		localStorage.removeItem("cartNumber");
 		window.location.reload(true);
